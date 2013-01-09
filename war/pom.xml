@@ -6,8 +6,7 @@
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>restfulexample</name>
-    <!-- TODO Change this URL once we're complete -->
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/FrankHassanabad/RESTfulExample.git</url>
     <parent>
         <groupId>frankhassanabad.github</groupId>
         <artifactId>restfulexample-parent</artifactId>

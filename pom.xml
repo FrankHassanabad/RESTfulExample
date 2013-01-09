@@ -6,20 +6,17 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>restfulexample-parent</name>
-	<!-- Change this once we have a real url -->
-    <url>http://frankhassanabad.github.com/</url>
+    <url>https://github.com/FrankHassanabad/RESTfulExample.git</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jettyVersion>9.0.0.M4</jettyVersion>
     </properties>
-	<!--
     <scm>
-        <connection>scm:git:git@github.com:FrankHassanabad/project.git</connection>
-        <url>scm:git:git@github.com:FrankHassanabad/project.git</url>
-        <developerConnection>scm:git:git@github.com:FrankHassanabad/project.git</developerConnection>
+        <connection>scm:git:git@github.com:FrankHassanabad/RESTfulExample.git</connection>
+        <url>scm:git:git@github.com:FrankHassanabad/RESTfulExample.git</url>
+        <developerConnection>scm:git:git@github.com:FrankHassanabad/RESTfulExample.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    -->
 
     <modules>
         <module>main</module>
