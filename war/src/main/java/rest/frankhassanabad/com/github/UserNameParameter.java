@@ -25,7 +25,6 @@ public class UserNameParameter {
     @GET
     @Produces("text/plain")
     public String getUser(@PathParam("username") String userName) {
-        // Return some cliched textual content
         return "UserName entered was:" + userName;
     }
 }

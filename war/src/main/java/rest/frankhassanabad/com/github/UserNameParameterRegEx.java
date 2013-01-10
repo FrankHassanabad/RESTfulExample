@@ -20,15 +20,18 @@ import javax.ws.rs.Produces;
  * UserName entered was:someOtherName
  * </pre>
  *
- * This differs from {@link UserNameParameter} in that this
- * only accepts regular expressions that are alpha or numeric.
+ * This differs from {@link UserNameParameter} in that
+ * the username variable will only match user names that
+ * begin with one upper or lower case letter and zero or more
+ * alpha numeric characters and the underscore character. If a
+ * user name does not match that a 404 (Not Found) response
+ * will occur.
  */
 @Path("/usersRegEx/{username: [a-zA-Z][a-zA-Z_0-9]*}")
 public class UserNameParameterRegEx {
     @GET
     @Produces("text/plain")
     public String getUser(@PathParam("username") String userName) {
-        // Return some cliched textual content
         return "UserNameRegEx entered was:" + userName;
     }
 }
