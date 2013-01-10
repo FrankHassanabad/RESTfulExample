@@ -29,6 +29,12 @@ import javax.ws.rs.Produces;
  */
 @Path("/usersRegEx/{username: [a-zA-Z][a-zA-Z_0-9]*}")
 public class UserNameParameterRegEx {
+
+    /**
+     * Called with the url of http://localhost:8080/users/{userName}
+     * @param userName The userName from the URL if it matches the regex
+     * @return The string from {userName} so that you can see it
+     */
     @GET
     @Produces("text/plain")
     public String getUser(@PathParam("username") String userName) {

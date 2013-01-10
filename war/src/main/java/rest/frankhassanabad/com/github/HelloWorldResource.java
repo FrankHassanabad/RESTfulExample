@@ -13,10 +13,15 @@ import javax.ws.rs.Produces;
  */
 @Path("/helloworld")
 public class HelloWorldResource {
-    // The Java method will process HTTP GET requests
+
+    /**
+     * The Java method will process HTTP GET requests from
+     * the URL  http://localhost:8080/rest/helloworld
+     * The Java method will produce content identified by the MIME Media
+     * type "text/plain"
+     * @return A Hello World string
+     */
     @GET
-    // The Java method will produce content identified by the MIME Media
-    // type "text/plain"
     @Produces("text/plain")
     public String getClichedMessage() {
         // Return some cliched textual content

@@ -22,6 +22,12 @@ import javax.ws.rs.Produces;
  */
 @Path("/users/{username}")
 public class UserNameParameter {
+
+    /**
+     * Called with the url of http://localhost:8080/users/{userName}
+     * @param userName The userName from the URL
+     * @return The string from {userName} so that you can see it
+     */
     @GET
     @Produces("text/plain")
     public String getUser(@PathParam("username") String userName) {
