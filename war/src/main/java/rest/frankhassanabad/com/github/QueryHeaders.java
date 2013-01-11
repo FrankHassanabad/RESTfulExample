@@ -2,6 +2,7 @@ package rest.frankhassanabad.com.github;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.HttpHeaders;
@@ -38,13 +39,14 @@ public class QueryHeaders {
      * the cookie information
      */
     @GET
+    @Produces("text/plain")
     public String getHeaderAndCookieInfo(@Context HttpHeaders httpHeaders) {
         MultivaluedMap<String, String> headers = httpHeaders.getRequestHeaders();
         Map<String, Cookie> cookies = httpHeaders.getCookies();
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("headers:");
         stringBuilder.append(headers.toString());
-        stringBuilder.append("\n    ");
+        stringBuilder.append("\n\n");
         stringBuilder.append("cookies:");
         stringBuilder.append(cookies.toString());
         return stringBuilder.toString();
