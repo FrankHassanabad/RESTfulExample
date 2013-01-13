@@ -6,6 +6,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.FileNotFoundException;
 
@@ -24,7 +25,7 @@ public class ExceptionThrowing {
      * @return Nothing, since this immediately throws an exception
      */
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getException() {
         throw new NotFoundException("This is a custom 404 (Not Found) Exception");
     }
@@ -40,7 +41,7 @@ public class ExceptionThrowing {
      */
     @GET
     @Path("mapper")
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getExceptionMapper() throws FileNotFoundException {
         throw new FileNotFoundException();
     }

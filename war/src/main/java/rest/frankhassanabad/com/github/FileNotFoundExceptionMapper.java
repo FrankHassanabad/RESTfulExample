@@ -11,7 +11,13 @@ import java.io.FileNotFoundException;
  */
 @Provider
 public class FileNotFoundExceptionMapper implements ExceptionMapper<FileNotFoundException> {
-    public Response toResponse(FileNotFoundException ex) {
-        return Response.status(404).entity(ex.getMessage()).type("text/plain").build();
+
+    /**
+     * Method to do the mapping
+     * @param exception The exception
+     * @return Returns a 404 for this mapping
+     */
+    public Response toResponse(FileNotFoundException exception) {
+        return Response.status(404).entity(exception.getMessage()).type("text/plain").build();
     }
 }

@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
 
@@ -34,7 +35,7 @@ public class UriInjection {
      * @return The URI info of absolute and relative path.
      */
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getUriInfo() {
         StringBuilder builder = new StringBuilder();
         builder.append("Absolute path:" + uriInfo.getAbsolutePath() + "\n");
@@ -57,7 +58,7 @@ public class UriInjection {
      */
     @Path("custom")
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getCustomBuiltUriInfo() {
         return UriBuilder.fromUri("http://localhost/").
                 path("{a}").

@@ -1,6 +1,7 @@
 package rest.frankhassanabad.com.github;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import java.awt.Color;
 import java.lang.reflect.Field;
 import java.util.List;
@@ -31,7 +32,7 @@ public class QueryParameter {
      */
     @Path("string")
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getString(@DefaultValue("Nothing set in the parameter") @QueryParam("param") String param) {
         return "The parameter set was: " + param;
     }
@@ -49,7 +50,7 @@ public class QueryParameter {
      */
     @Path("strings")
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getStrings(@DefaultValue("Nothing set in the parameter") @QueryParam("param") List<String> params) {
         StringBuilder returnString = new StringBuilder("The parameters set were:\n");
         for (String parameter : params) {
@@ -75,7 +76,7 @@ public class QueryParameter {
      */
     @Path("color")
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getColor(@DefaultValue("white") @QueryParam("colorParam") ColorParam colorParam) {
         Color color = colorParam.getColor();
         return "The rgb of the color passed in is: r:" +

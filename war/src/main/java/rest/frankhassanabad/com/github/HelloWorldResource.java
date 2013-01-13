@@ -3,6 +3,7 @@ package rest.frankhassanabad.com.github;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  * Point your browser to http://localhost:8080/rest/helloworld
@@ -22,7 +23,7 @@ public class HelloWorldResource {
      * @return A Hello World string
      */
     @GET
-    @Produces("text/plain")
+    @Produces(MediaType.TEXT_PLAIN)
     public String getClichedMessage() {
         // Return some cliched textual content
         return "Hello World! (From within the rest service)";
