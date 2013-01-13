@@ -10,6 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jettyVersion>9.0.0.M4</jettyVersion>
+        <jerseyVersion>1.16</jerseyVersion>
     </properties>
     <scm>
         <connection>scm:git:git@github.com:FrankHassanabad/RESTfulExample.git</connection>
