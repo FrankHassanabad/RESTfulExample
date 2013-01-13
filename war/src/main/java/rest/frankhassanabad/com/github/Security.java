@@ -59,7 +59,7 @@ public class Security {
         if (principal != null) {
             return principal.getName();
         } else {
-            return "Security principle is null";
+            return "No security principal";
         }
     }
 }
