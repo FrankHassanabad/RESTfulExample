@@ -13,6 +13,16 @@ import javax.ws.rs.core.MultivaluedMap;
  * <pre>
  * http://localhost:8080/rest/query/strings
  * </pre>
+ * This example will push through the query of
+ * <pre>
+ * http://localhost:8080/rest/query/strings?param=Here%20is%20one%20parameter&Here%20is%20two%20parameters
+ * </pre>
+ * The return value should be the echo which is
+ * <pre>
+ * The parameters set were:
+ * Here is one parameter
+ * Here is two parameters
+ * </pre>
  * See from the war file the class of
  * QueryParameter
  */
