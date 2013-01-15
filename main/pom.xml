@@ -4,12 +4,12 @@
     <groupId>frankhassanabad.com.github</groupId>
     <artifactId>main</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>main</name>
     <url>https://github.com/FrankHassanabad/RESTfulExample.git</url>
 
     <parent>
-        <groupId>frankhassanabad.com.github</groupId>
+        <groupId>frankhassanabad.github</groupId>
         <artifactId>restfulexample-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
