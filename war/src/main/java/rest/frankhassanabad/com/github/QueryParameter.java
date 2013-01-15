@@ -51,7 +51,7 @@ public class QueryParameter {
     @Path("strings")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getStrings(@DefaultValue("Nothing set in the parameter") @QueryParam("param") List<String> params) {
+    public String getStrings(@DefaultValue("Nothing set in the parameters") @QueryParam("param") List<String> params) {
         StringBuilder returnString = new StringBuilder("The parameters set were:\n");
         for (String parameter : params) {
             returnString.append(parameter);

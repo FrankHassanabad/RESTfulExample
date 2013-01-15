@@ -11,6 +11,13 @@ import java.util.List;
 /**
  * This is a client which will get the HelloWorld
  * resource and print it out through system out.
+ * This uses the URI resource of
+ * <pre>
+ * http://localhost:8080/rest/helloworld
+ * </pre>
+ * to get its hello world string
+ * See from the war file the class of
+ * HelloWorldResource
  */
 public class GetHelloWorld {
 
