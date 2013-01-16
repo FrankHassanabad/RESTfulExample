@@ -4,6 +4,7 @@ import com.sun.jersey.spi.resource.Singleton;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -40,12 +41,14 @@ public class StringPostGetResource {
      * http://localhost:8080/rest/resource/strings/post/single
      * </pre>
      * @param stringToPost  The string that is posted to this URI
+     * @return Return a 201 response which means we accpted it.
      */
     @POST
     @Path("post/single")
     @Consumes(MediaType.TEXT_PLAIN)
-    public void postString(String stringToPost) {
+    public Response postString(String stringToPost) {
         strings.add(stringToPost);
+        return Response.status(201).build();
     }
 
     /**
