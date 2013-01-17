@@ -23,6 +23,5 @@ public class GetStrings {
         WebResource resource = client.resource("http://localhost:8080/rest/resource/strings");
         String strings = resource.get(String.class);
         System.out.println(strings);
-
     }
 }
