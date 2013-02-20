@@ -9,13 +9,13 @@ import javax.ws.rs.core.MediaType;
 /**
  * This tests out the parameters feature of Jersey and
  * REST.
- * Point your browser to http://localhost:8080/users/someName
+ * Point your browser to http://localhost:8080/usersRegEx/someName
  * and this will return
  * <pre>
  * UserName entered was:someName
  * </pre>
  * If you point your browser to a different user name like
- * http://localhost:8080/users/someOtherName
+ * http://localhost:8080/usersRegEx/someOtherName
  * You will get
  * <pre>
  * UserName entered was:someOtherName
