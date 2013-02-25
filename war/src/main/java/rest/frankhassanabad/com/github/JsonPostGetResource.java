@@ -25,7 +25,7 @@ import javax.ws.rs.core.Response;
  * Random random = new Random();
  * JsonObject jsonObject = new JsonObject();
  * jsonObject.setDoubleAttribute(random.nextDouble());
- * jsonObject.setIntegerAttribue(random.nextInt());
+ * jsonObject.setIntegerAttribute(random.nextInt());
  * jsonObject.setStringAttribute("Serialization object using a custom string that I am utilizing");
  *
  * //Post it
@@ -55,7 +55,12 @@ public class JsonPostGetResource {
 
     /**
      * Return the JSON object where it is automatically
-     * serialized by Jersey into a string.
+     * serialized by Jersey into a string.  You would go
+     * to this URI
+     * <pre>
+     * http://localhost:8080/rest/resource/json
+     * </pre>
+     * to see the object in memory
      * @return The JSON object where it will be serialized
      * automatically for us.
      */
@@ -70,7 +75,7 @@ public class JsonPostGetResource {
      * serialized by Jersey into a JsonObject.
      * @param postObject The JSON object serialized for us into
      * our json object.
-     * @return Return a 201 response which means we accpted it.
+     * @return Return a 201 response which means we created it.
      */
     @POST
     @Path("/post/single")

@@ -36,5 +36,10 @@
             <artifactId>jersey-json</artifactId>
             <version>${jerseyVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-multipart</artifactId>
+            <version>${jerseyVersion}</version>
+        </dependency>
     </dependencies>
 </project>

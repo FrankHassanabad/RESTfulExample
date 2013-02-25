@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.Random;
 
 /**
- * Simple client to post a JSON object ot a service.
+ * Simple client to post a JSON object to a service.
  * This uses the service of
  * <pre>
  * http://localhost:8080/rest/resource/json/post/single
