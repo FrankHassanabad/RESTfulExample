@@ -45,14 +45,6 @@ public class MultipartPostGetResource {
     String string2 = "";
 
     /**
-     * Post the JSON object where the string is automatically
-     * serialized by Jersey into a JsonObject.
-     * @param postObject The JSON object serialized for us into
-     * our json object.
-     * @return Return a 201 response which means we accepted it.
-     */
-
-    /**
      * Post the multi-part message form with our keys being
      * string_1 and string_2 within our multi-part form.
      * @param string1 The string_1 within our form data.
